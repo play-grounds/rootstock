@@ -1,0 +1,23 @@
+{
+  "name": "rootstock",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Smart contract dev on Rootstock testnet, signed by a did:nostr identity",
+  "scripts": {
+    "address": "node derive-address.mjs",
+    "verify": "node derive-address.mjs --verify",
+    "compile": "hardhat compile",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network rootstockTestnet",
+    "balance": "hardhat run scripts/balance.js --network rootstockTestnet"
+  },
+  "dependencies": {
+    "@noble/curves": "^2.2.0",
+    "@noble/hashes": "^2.2.0",
+    "ethers": "^6.17.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.0"
+  }
+}
